@@ -87,7 +87,7 @@
                     <a class="nav-link" href="{% url 'Inicio' %}">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'Mostrar' %}">Tienda</a>
+                    <a class="nav-link" href="{% url 'Tienda' %}">Tienda</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'Nosotros' %}">Nosotros</a>
@@ -186,6 +186,13 @@
                     {{ form.tamaño.label }}
                 </label>
                 {{ form.tamaño}}
+            </div>
+            <br>
+            <div class="row">
+                <label for="{{ form.field.name }}">
+                    {{ form.cantidad.label }}
+                </label>
+                {{ form.cantidad}}
             </div>
             <br>
             <div class="row">

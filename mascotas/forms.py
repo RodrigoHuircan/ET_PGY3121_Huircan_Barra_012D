@@ -12,7 +12,7 @@ from django.contrib.auth.models import User
 class ArticuloForm(forms.ModelForm):
     class Meta:
         model = Articulo
-        fields = ['codigo', 'nombre', 'precio', 'categoria','tipo', 'tamaño', 'imagen']
+        fields = ['codigo', 'nombre', 'precio', 'categoria','tipo', 'tamaño', 'cantidad' , 'imagen']
         labels = {
             'codigo' : "Codigo",
             'nombre' : "Nombre",
@@ -20,6 +20,7 @@ class ArticuloForm(forms.ModelForm):
             'categoria' : "Categoria",
             'tipo' : "Tipo",
             'tamaño' : "Tamaño",
+            'cantidad' : 'Cantidad',
             'imagen': "Imagen",
         }
         widgets={
@@ -62,6 +63,13 @@ class ArticuloForm(forms.ModelForm):
                     'placeholder' : 'Ingrese el tamaño',
                     'class' : 'form-control',
                     'id' : 'tamaño'
+                }
+            ),
+            'cantidad':forms.TextInput(
+                attrs={
+                    'placeholder' : 'Ingrese la cantidad',
+                    'class' : 'form-control',
+                    'id' : 'cantidad'
                 }
             ),
             'imagen':forms.FileInput(

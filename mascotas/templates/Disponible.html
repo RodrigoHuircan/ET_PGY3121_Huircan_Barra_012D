@@ -38,7 +38,7 @@
                     <a class="nav-link" href="{% url 'Inicio' %}">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'Mostrar' %}">Tienda</a>
+                    <a class="nav-link" href="{% url 'Tienda' %}">Tienda</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'Nosotros' %}">Nosotros</a>
@@ -102,6 +102,7 @@
                     <th>Precio</th>
                     <th>Tipo</th>
                     <th>Tamaño</th>
+                    <th>Cantidad</th>
                     <th>Imagen</th>
                     <th>Categoría</th>
                     <th>Eliminar</th>
@@ -116,6 +117,7 @@
                     <td>{{ articulo.precio }}</td>
                     <td>{{ articulo.tipo }}</td>
                     <td>{{ articulo.tamaño }}</td>
+                    <td>{{ articulo.cantidad }}</td>
                     {% if articulo.imagen %}
                     <td>
                         <img src="{{ articulo.imagen.url }}" style = "width: 40%;">

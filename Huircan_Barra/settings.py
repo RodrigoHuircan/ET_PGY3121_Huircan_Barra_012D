@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'mascotas',
+    'pure_pagination',
+    'bootstrap4'
 ]
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
@@ -66,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'mascotas.context_processor.total_carrito',               
             ],
         },
     },
