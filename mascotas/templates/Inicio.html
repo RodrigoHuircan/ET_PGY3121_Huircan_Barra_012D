@@ -39,9 +39,6 @@
                     <a class="nav-link" href="{% url 'Inicio' %}">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'Tienda' %}">Tienda</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="{% url 'Nosotros' %}">Nosotros</a>
                 </li>
                 <li class="nav-item">
@@ -56,6 +53,9 @@
 
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'Tienda' %}">Tienda</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'Disponible' %}">Inventario</a>
                     </li>
                 </ul>
@@ -64,6 +64,7 @@
                         <a class="nav-link disabled" href="#">¡Bienvenido {{user.username}}!</a>
                     </li>
                 </ul>
+
     
     
             {% else %}
